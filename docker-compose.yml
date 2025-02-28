@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    image: cowry_frontend
+    container_name: cowry_frontend_con
+    command: sh ./start.sh
+    env_file: .env
+    ports:
+      - "1010:1010" 
+    volumes:
+      - ./:/usr/src/app
+
+  
